@@ -1,0 +1,4 @@
+##Access MySql database from command line
+1. cd C:\Program Files\MySQL\MySQL Shell 8.0\bin
+2. mysql -u root -pQWERTY@1 -h localhost snippetbox
+3. mysql -D snippetbox -u web -p
