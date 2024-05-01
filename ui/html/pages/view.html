@@ -1,0 +1,18 @@
+{{define "title"}}Snippet #{{.Snippet.ID}}{{end}}
+{{define "main"}}
+<div class='snippet'>
+    <div class='metadata'>
+        <strong>{{.Snippet.Title}}</strong>
+        <span>#{{.Snippet.ID}}</span>
+    </div>
+    <pre><code>{{.Snippet.Content}}</code></pre>
+    <div class='metadata'>
+        <time>Created: {{.Snippet.Created.Weekday}}</time>
+        <!--Weekday is a method called of Created
+        as it is of type time-->>
+        <time>Expires: {{.Snippet.Expires.AddDate 0 6 0}}</time> 
+        <!--AddDate method called with 6 months 
+        added to time with 0 6 0 fomrat-->
+    </div>
+</div>
+{{end}}
